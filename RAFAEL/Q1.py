@@ -1,22 +1,18 @@
 def solution(s):
     flag = True
     stack = []
-    char1, char2, char3  = '(', '{', '['
+    my_set = {'(', '{', '['}
     for char in s:
-        if char == char1:
-            stack.append(char1)
-        if char == char2:
-            stack.append(char2)
-        if char == char3:
-            stack.append(char3)
+        if char in my_set:
+            stack.append(char)
         if char == ')':
-            if len(stack) == 0 or stack.pop() != char1:
+            if len(stack) == 0 or stack.pop() != '(':
                 flag = False
         if char == '}':
-            if len(stack) == 0 or stack.pop() != char2:
+            if len(stack) == 0 or stack.pop() != '{':
                 flag = False
         if char == ']':
-            if len(stack) == 0 or stack.pop() != char3:
+            if len(stack) == 0 or stack.pop() != '[':
                 flag = False
     if len(stack) != 0:
         flag = False
@@ -24,7 +20,7 @@ def solution(s):
 
 
 def main():
-    s = "(){[]}"
+    s = "(){[]}{[}]"
     print(solution(s))
 
 if __name__ == "__main__":
