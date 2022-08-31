@@ -1,7 +1,5 @@
 
 def solution(s):
-    if ' ' in s:
-        return False
     flag = True
     stack = []
     my_set = {'(', '{', '['}
