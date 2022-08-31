@@ -25,7 +25,7 @@ console.log(containscommonchar(arr1, arr3));
 
 
 
-// Q2
+// Q1.2
 function containscommonchar2(arr1, arr2) {
   return arr1.some(item => arr2.includes(item));
 }
