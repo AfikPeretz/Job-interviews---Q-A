@@ -4,7 +4,6 @@ def solution(S, C):
     for row in rows:
         col = row.split(",")
         tbl.append(col)
-    x = 10
     for i in range(len(tbl[0])):
         col_name = tbl[0][i]
         if col_name == C:
